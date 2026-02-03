@@ -56,7 +56,7 @@ function alterarContexto(contexto) {
     mostrarTempo()
     botoes.forEach(function (contexto){ contexto.classList.remove('active')})
     html.setAttribute('data-contexto',contexto)
-    banner.setAttribute('src',`/imagens/${contexto}.png`)
+    banner.setAttribute('src',`./imagens/${contexto}.png`)
     switch (contexto) {
         case "foco":
             titulo.innerHTML = `
@@ -99,14 +99,14 @@ function iniciarOuPausar() {
     intervaloId = setInterval(contagemRegressiva, 1000)
     somPlay.play()
     iniciarOuPausarBt.textContent = "Pausar"
-    imgIniciarOuPausarBt.setAttribute('src',`/imagens/pause.png`)
+    imgIniciarOuPausarBt.setAttribute('src',`./imagens/pause.png`)
 }
 
 
 function zerar() {
     clearInterval(intervaloId)
     iniciarOuPausarBt.textContent = "Começar"
-    imgIniciarOuPausarBt.setAttribute('src',`/imagens/play_arrow.png`)
+    imgIniciarOuPausarBt.setAttribute('src',`./imagens/play_arrow.png`)
     intervaloId = null
 }
 
